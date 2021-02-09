@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "ORDERS")
 @Getter
 @Setter
+@Table(name = "ORDERS")
 public class Order {
 
     @Id
@@ -23,8 +23,10 @@ public class Order {
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
+    @Column(name = "ORDER_DATE")
     private LocalDateTime orderDate;
 
+    @Column(name = "STATUS")
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 

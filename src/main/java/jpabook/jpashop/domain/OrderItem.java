@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@Table(name = "ORDER_ITEM")
 public class OrderItem {
 
     @Id
@@ -23,7 +24,9 @@ public class OrderItem {
     @JoinColumn(name = "ITEM_ID")
     private Item item;
 
+    @Column(name = "ORDER_PRICE")
     private int orderPrice;
 
+    @Column(name = "COUNT")
     private int count;
 }
