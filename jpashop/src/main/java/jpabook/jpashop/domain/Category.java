@@ -11,14 +11,13 @@ import java.util.List;
 @Getter
 @Setter
 @Table(name = "CATEGORY")
-public class Category {
+public class Category extends BaseEntity {
 
     @Id
     @GeneratedValue
     @Column(name = "CATEGORY_ID")
     private Long id;
 
-    @Column(name = "NAME")
     private String name;
 
     @ManyToMany

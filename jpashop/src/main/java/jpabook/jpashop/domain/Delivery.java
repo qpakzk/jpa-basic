@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table(name = "DELIVERY")
-public class Delivery {
+public class Delivery extends BaseEntity {
 
     @Id
     @GeneratedValue
@@ -19,15 +19,11 @@ public class Delivery {
     @OneToOne(mappedBy = "delivery")
     private Order order;
 
-    @Column(name = "CITY")
     private String city;
 
-    @Column(name = "STREET")
     private String street;
 
-    @Column(name = "ZIPCODE")
     private String zipcode;
 
-    @Column(name = "STATUS")
     private DeliveryStatus status;
 }

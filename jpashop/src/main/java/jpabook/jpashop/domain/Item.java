@@ -10,21 +10,18 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Table(name = "ITEM")
-public class Item {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class Item extends BaseEntity {
 
     @Id
     @GeneratedValue
     @Column(name = "ITEM_ID")
     private Long id;
 
-    @Column(name = "NAME")
     private String name;
 
-    @Column(name = "PRICE")
     private int price;
 
-    @Column(name = "STOCK_QUANTITY")
     private int stockQuantity;
 
     @ManyToMany(mappedBy = "items")
