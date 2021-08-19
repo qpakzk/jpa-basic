@@ -1,5 +1,6 @@
-package hellojpa.section7;
+package hellojpa;
 
+import hellojpa.section7.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 
